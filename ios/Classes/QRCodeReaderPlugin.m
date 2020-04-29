@@ -95,8 +95,8 @@ float portraitheight;
 
 
 -(void)loadViewQRCode {
-    portraitheight = height = [UIScreen mainScreen].applicationFrame.size.height;
-    landscapeheight = width = [UIScreen mainScreen].applicationFrame.size.width;
+    portraitheight = height = [[UIScreen mainScreen] bounds].size.height;
+    landscapeheight = width = [[UIScreen mainScreen] bounds].size.width;
     if(UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])){
         landscapeheight = height;
         portraitheight = width;
